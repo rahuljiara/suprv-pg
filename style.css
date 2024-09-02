@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --bodyBg: #161616;
+    --boxBg: #A9A9A9;
+    --buttonBg: #0e7bc9;
+    --whiteColor: rgb(255, 255, 255);
+    --blackColor: rgb(0, 0, 0);
+    --greyColor: rgb(192, 192, 192);
+    --font: "Roboto", sans-serif;
+}
+
+
+
+html {
+    font-size: 100%;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--whiteColor);
+    font-family: var(--font);
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    background: var(--bodyBg);
+}
+
+.body-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Flex Utility Class To Be added In HTML File */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    height: 3.125rem;
+    width: 100%;
+    background: var(--boxBg);
+    justify-content: space-between;
+}
+
+.nav-logo {
+    gap: .5rem;
+}
+
+.nav-logo-img img {
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-left: .5rem;
+}
+
+.nav-logo-name {
+    color: var(--blackColor);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+
+/* Navbar List */
+
+ul {
+    gap: .8rem;
+    list-style: none;
+}
+
+.nav-links ul a {
+    text-decoration: none;
+}
+
+.nav-links ul li {
+    background-color: var(--blackColor);
+    min-height: 2rem;
+    height: fit-content;
+    min-width: 5rem;
+    width: fit-content;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: .95rem;
+    transition: .4s;
+}
+
+.nav-links ul a li:hover {
+    color: rgb(38, 0, 0);
+    background: var(--whiteColor);
+}
+
+/* Navbar Searchbox */
+
+.nav-search {
+    position: relative;
+}
+
+#searchbox {
+    height: 2.7rem;
+    width: 15rem;
+    padding: .5rem;
+    margin-right: 3.7rem;
+    background-color: var(--bodyBg);
+    border-radius: 3rem 0 0 3rem;
+    color: var(--whiteColor);
+}
+
+input {
+    outline: none;
+    border: 0;
+}
+
+.nav-search form input[type="search"]::placeholder {
+    color: var(--greyColor);
+    font-size: .9rem;
+}
+
+#searchbox-submit-btn {
+    position: absolute;
+    right: 0;
+    height: 2.7rem;
+    width: 2.7rem;
+    margin-right: 1rem;
+    border-radius: 0 3rem 3rem 0;
+    color: var(--blackColor);
+    font-weight: bold;
+
+}
