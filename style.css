@@ -2,13 +2,26 @@
 
 
 :root {
+    /* Home Page */
+    --font: "Roboto", sans-serif;
     --bodyBg: #161616;
-    --boxBg: #A9A9A9;
+    --boxBg: #9fbeb0;
+    --transparentBoxBg: #bfffe1bd;
     --buttonBg: #0e7bc9;
+    --logoLeftColor: #de0707;
+    --logoRightColor: #009b50;
     --whiteColor: rgb(255, 255, 255);
     --blackColor: rgb(0, 0, 0);
     --greyColor: rgb(192, 192, 192);
-    --font: "Roboto", sans-serif;
+    --iconColor: #0e7bc9;
+    --footerText: rgb(23, 23, 23);
+
+    /* About Page */
+    --aboutBg: rgba(236, 236, 255, 0.779);
+    --aboutHeadText: rgb(15, 21, 24);
+    --aboutText: rgb(132, 151, 165);
+    --aboutAppHeadBg: rgb(254,89,0);
+    --cardDescColor : rgb(57, 57, 57);
 }
 
 
@@ -30,27 +43,22 @@ html {
 body {
     height: 100vh;
     width: 100%;
-    overflow-y: auto;
     background: var(--bodyBg);
 }
-
-.body-container {
-    height: 100%;
-    width: 100%;
-}
-
 
 /* Flex Utility Class To Be added In HTML File */
 .flex {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
 /* Navbar */
 .navbar {
     position: fixed;
+    top: 0;
     height: 3.125rem;
     width: 100%;
     background: var(--boxBg);
@@ -143,4 +151,275 @@ input {
     color: var(--blackColor);
     font-weight: bold;
 
+}
+
+/* Navbar Ends Here */
+
+
+/* Main Container Starts Here */
+.body-container{
+    position: absolute;
+    top: 3.125rem;
+    height: calc(100vh - 3.125rem);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.body-container::-webkit-scrollbar {
+    width: .6rem;
+    background-image: linear-gradient(rgb(0, 80, 112), rgb(44, 44, 44));
+
+}
+
+.body-container::-webkit-scrollbar-thumb {
+    background-color: skyblue;
+    border-radius: 5rem;
+}
+
+/* Home Container */
+.home {
+    height: 25rem;
+    width: 65rem;
+    margin-top: 1rem;
+    background: url("img/img2.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.home .home-info {
+    height: 100%;
+    width: 30rem;
+    border-radius: 1rem;
+    background: var(--transparentBoxBg);
+}
+
+.home-info .home-info-message,
+.home-info .home-info-brand-name,
+.home-info-message2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    color: var(--blackColor);
+    line-height: 3.8rem;
+}
+
+.home-info .home-info-brand-name {
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.home-info .home-info-brand-name span:nth-child(1) {
+    color: var(--logoLeftColor);
+}
+
+.home-info .home-info-brand-name span:nth-child(2) {
+    color: var(--logoRightColor);
+}
+
+.home-info-message2 {
+    margin-top: 2rem;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.home-info-discover-btn {
+    height: 5rem;
+    width: fit-content;
+}
+
+.home-info-discover-btn a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: .7rem 3rem;
+    background: var(--buttonBg);
+    border-radius: 3rem;
+}
+
+
+/* Location Container */
+.location {
+    height: 6rem;
+    width: 50rem;
+    background: var(--boxBg);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    justify-content: space-evenly;
+}
+
+.location-city-head,
+.location-check-in-out-head,
+.location-guest-head {
+    color: var(--blackColor);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    text-align: left;
+}
+
+.location-city-head span,
+.location-check-in-out-head span,
+.location-guest-head span {
+    margin-right: .5rem;
+}
+
+.location-city-head span i,
+.location-check-in-out-head span i,
+.location-guest-head span i {
+    color: var(--iconColor);
+}
+
+.location-city-name {
+    color: var(--blackColor);
+}
+
+.location-guest-number input,
+.location-check-in-out-date input {
+    color: var(--blackColor);
+    width: 10rem;
+    height: 2rem;
+    border-radius: .5rem;
+    padding: 0 .5rem;
+}
+
+.location-search input {
+    width: 10rem;
+    height: 3rem;
+    color: var(--blackColor);
+    border-radius: 3rem;
+    padding: 0 .5rem;
+}
+
+/* Page 2 - accommodation */
+.accommodation-container {
+    height: 100vh;
+    width: 85%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.page-hr {
+    height: .3rem;
+    border-radius: 3rem;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.accommodation {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card-acco {
+    height: 10rem;
+    width: 10rem;
+}
+
+.accommodation-card {
+    height: 9.5rem;
+    width: 9.5rem;
+    background-color: var(--boxBg);
+    /* box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.251),
+                1px 1px 10px rgba(255, 255, 255, 0.34); */
+    border-radius: 1rem;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.accommodation-card:hover {
+    zoom: 1.03;
+}
+
+.accommodation-card-img {
+    height: 75%;
+    width: 100%;
+}
+
+.accommodation-card-img img {
+    height: 98%;
+    width: 98%;
+    margin: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.accommodation-card-text {
+    height: 25%;
+    width: 100%;
+    color: var(--blackColor);
+    font-weight: bold;
+    text-align: justify;
+    text-shadow: .04rem .04rem rgb(255, 255, 255);
+}
+
+/* Footer Starts Here */
+.footer {
+    height: 7rem;
+    width: 100%;
+    background: var(--greyColor);
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: space-between;
+}
+
+.footer-head div {
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--footerText);
+}
+
+.footer-desc,
+.footer-head {
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right div,
+.footer-right div a,
+.footer-left div,
+.footer-middle div {
+    color: var(--footerText);
+    font-size: .8rem;
+}
+
+.footer-right div span,
+.footer-left div span {
+    color: var(--footerText);
+    font-weight: bold;
+}
+
+
+
+.footer-middle {
+    flex-direction: column;
+}
+
+.footer-middle>.flex {
+    gap: .5rem;
+}
+
+.footer-middle div img {
+    margin-top: .5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.footer-middle .footer-copyright {
+    font-size: .7rem;
+    margin-top: 1rem;
 }

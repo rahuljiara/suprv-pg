@@ -1,0 +1,150 @@
+@import url(style.css);
+
+body {
+    background-color: var(--aboutBg);
+}
+
+.about-container {
+    position: absolute;
+    top: 3.125rem;
+    height: calc(100vh - 3.125rem);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.about {
+    margin: auto;
+    height: fit-content;
+
+}
+
+
+h1 {
+    color: var(--aboutHeadText);
+    text-align: center;
+}
+
+.about-head {
+    font-weight: bold;
+    color: var(--aboutHeadText);
+    text-align: center;
+}
+
+.about-app {
+    min-height: 28rem;
+    height: fit-content;
+    padding:1rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+    /* background-image: url("img/img3.png"); */
+    margin: 0;
+
+}
+
+.about-app-head {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: var(--aboutAppHeadBg);
+    height: 7rem;
+    width: 30rem;
+    color: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+}
+
+.about-app-greet {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    width: 40rem;
+}
+
+.about-app>p {
+    margin-top: 2rem;
+    color: rgb(79, 79, 79);
+    border-radius: .5rem;
+    width: 50rem;
+}
+
+.about-app>p span {
+    color: rgb(79, 79, 79);
+}
+
+.about-app-btn {
+    background: goldenrod;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.about-head{
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.about-head > hr{
+    margin-bottom: 5rem;
+    height:.2rem;
+    border:0;
+    background:var(--aboutHeadText);
+    border-radius: 3rem;
+    width:8rem;
+}
+
+/* Team Info */
+.about-team {
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about-team-card {
+    position: relative;
+    height: 12rem;
+    width: 20rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.559);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-team-card-title {
+    font-weight: bold;
+    color: black;
+}
+
+.about-team-card-img img {
+    position: absolute;
+    top: -2.5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.about-team-card-desc {
+    position: absolute;
+    top: 2.6rem;
+}
+
+.about-team-card-desc h5{
+    color: var(--cardDescColor);
+}
+.about-team-card-desc p{
+    width:90%;
+    margin:auto;
+    font-size: .8rem;
+    color: var(--cardDescColor);
+    margin-top:.5rem;
+}
+.about-team-card-socialmedia{
+    margin-top:.5rem;
+}
+
+.about-team-card-socialmedia img {
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}

@@ -6,47 +6,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPRV PG</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/cd2934c914.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Navbar Start -->
+    <div class="navbar flex">
+        <!-- Nav logo -->
+        <div class="nav-logo flex">
+            <div class="nav-logo-img flex">
+                <img src="img/favicon.png">
+            </div>
+            <div class="nav-logo-name">SUPRV PG</div>
+        </div>
+        <!-- Navlinks -->
+        <div class="nav-links">
+            <ul class="flex">
+                <a href="">
+                    <li>Explore</li>
+                </a>
+                <a href="">
+                    <li>Book Now</li>
+                </a>
+                <a href="">
+                    <li>Help</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+            </ul>
+        </div>
+        <!-- Search box -->
+        <div class="nav-search">
+            <form>
+                <input type="search" name="search" id="searchbox" placeholder="search for accomodation" required>
+                <input type="submit" name="Go" id="searchbox-submit-btn" value="Go">
+            </form>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
     <div class="body-container">
-        <div class="navbar flex">
-            <div class="nav-logo flex">
-                <div class="nav-logo-img flex">
-                    <img src="img/favicon.png">
+        <!-- home-container Start -->
+        <div class="home-container flex">
+            <div class="home">
+                <div class="home-info flex">
+                    <div>
+                        <div class="home-info-message flex">
+                            Discover New <br> Places With
+                        </div>
+                        <div class="home-info-brand-name">
+                            <span>SUPRV</span> <span>PG</span>
+                        </div>
+                        <br>
+                        <div class="home-info-message2">
+                            Find Your Perfect SUPRV Home
+                        </div>
+                        <div class="home-info-discover-btn flex">
+                            <a href="" id="discover-btn">Discover ➜</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-logo-name">SUPRV PG</div>
             </div>
-            <div class="nav-links">
-                <ul class="flex">
-                    <a href="">
-                        <li>Explore</li>
-                    </a>
-                    <a href="">
-                        <li>Book Now</li>
-                    </a>
-                    <a href="">
-                        <li>Help</li>
-                    </a>
-                    <a href="">
-                        <li>About</li>
-                    </a>
-                </ul>
+        </div>
+        <!-- home-container End -->
+
+        <!-- Location Container -->
+        <div class="location-container flex">
+            <div class="location flex">
+                <div class="location-city">
+                    <div class="location-city-head">
+                        <span><i class="fa-solid fa-location-dot"></i></span>Location
+                    </div>
+                    <div class="location-city-name">Ahmedabad</div>
+                </div>
+
+                <div class="location-check-in-out">
+                    <div class="location-check-in-out-head">
+                        <span><i class="fa-solid fa-calendar-days"></i></span>Check-in/out
+                    </div>
+                    <div class="location-check-in-out-date">
+                        <input type="date" name="check-in-out-date" id="Check-in-out-date">
+                    </div>
+                </div>
+
+                <div class="location-guest">
+                    <div class="location-guest-head">
+                        <span><i class="fa-solid fa-person"></i></span>Guest
+                    </div>
+                    <div class="location-guest-number">
+                        <input type="number" name="guest-number" id="guest-number">
+                    </div>
+                </div>
+
+                <div class="location-search">
+                    <input type="search" placeholder="Search ...">
+                </div>
+
             </div>
-            <div class="nav-search">
-                <form>
-                    <input type="search" name="search" id="searchbox" placeholder="search for accomodation" required>
-                    <input type="submit" name="Go" id="searchbox-submit-btn" value="Go">
-                </form>
+        </div>
+
+        <!-- Page 2 : Accomodation Type -->
+        <div class="accommodation-container flex">
+            <div class="page-heading">
+                <p>Accommodation Types</p>
+                <hr class="page-hr">
+            </div>
+
+
+            <div class="accommodation flex">
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="single-room-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/single room.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Single Room </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="shared-room-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/shared bedroom.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Shared Room </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex">
+                        <div class="accommodation-card-img flex" id="dormitory-acco">
+                            <img src="img/dormitory.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Dormitory </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="couples-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/couples room.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Couples </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="girl-pg-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/Girls pg.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Girl's PG </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="family-room-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/family bedroom.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Family Room </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="1bhk-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/1bhk.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> 1 BHK Flat </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="2bhk-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/2bhk.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> 2 BHK Flat </div>
+                    </div>
+                </div>
+
+                <div class="card-acco flex">
+                    <div class="accommodation-card flex" id="shared-flat-acco">
+                        <div class="accommodation-card-img flex">
+                            <img src="img/shared appartments.jpeg">
+                        </div>
+                        <div class="accommodation-card-text flex"> Shared Flat </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
 
+        <!-- footer -->
+        <div class="footer flex">
+            <div class="footer-head flex">
+                <div class="left-footer-head"> SUPRV PG Contact </div>
+                <div class="middle-footer-head"> SocialMedia </div>
+                <div class="right-footer-head"> Support </div>
+            </div>
+
+            <div class="footer-desc flex">
+                <div class="footer-left">
+                    <div> <span>Email :</span> suprvpg.contact@mail.com </div>
+                    <div> <span>Ph No :</span> +91 0099887654 </div>
+                    <div> <span>Address :</span> Gota, Ahmedabad </div>
+                    <div> <span>Nearby : </span> Silver Oak University </div>
+                </div>
+
+                <div class="footer-middle flex">
+                    <div class="flex">
+                        <div> <img src="img/insta.png"> </div>
+                        <div> <img src="img/fb.png"> </div>
+                        <div> <img src="img/x.png"> </div>
+                        <div> <img src="img/youtube.png"> </div>
+                    </div>
+                    <div class="footer-copyright">
+                        SUPRV PG © 2024
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <div>
+                        <a href="">Help Center</a>
+                    </div>
+                    <div>
+                        <a href="">Terms & Conditions</a>
+                    </div>
+                    <div>
+                        <a href="">feedback</a>
+                    </div>
+                    <div>
+                        <a href="">report</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
